@@ -48,10 +48,14 @@ public class Program17 {
 		c1.display();
 		
 		Person17.totalCounter();
-		
+/*		
 		enterInfoPerson(person1, in);
 		enterInfoEmployee(emp1, in);
 		enterInfoClient(c1, in);
+*/		
+		enterInfo(person1, in);
+		enterInfo(emp1, in);
+		enterInfo(c1, in);
 		
 		person1.display();
 		emp1.display();
@@ -61,7 +65,7 @@ public class Program17 {
 		in.close();
 		
 		}
-	
+/*	
 	public static void enterInfoPerson(Person17 p, Scanner input) {
 		System.out.print("Enter name: ");
 		p.setName(input.nextLine());
@@ -78,5 +82,21 @@ public class Program17 {
 		System.out.print("Enter bank: ");
 		c.setBank(input.nextLine());
 	}
-
+*/	
+	public static void enterInfo(Person17 p, Scanner input) {
+		System.out.print("Enter name: ");
+		p.setName(input.nextLine());
+	}	
+	public static void enterInfo(Employee17 e, Scanner input) {
+		enterInfo(e, input);
+		System.out.print("Enter company: ");
+		e.setCompany(input.nextLine());
+	}
+	public static void enterInfo(Client17 c, Scanner input) {
+		enterInfo(c, input);
+		System.out.print("Enter many: ");
+		c.setSum(Integer.parseInt(input.nextLine()));
+		System.out.print("Enter bank: ");
+		c.setBank(input.nextLine());
+	}
 }
